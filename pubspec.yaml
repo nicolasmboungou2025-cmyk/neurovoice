@@ -1,0 +1,62 @@
+name: neurovoice
+description: Assistant vocal intelligent pour la gestion des appels téléphoniques.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Reconnaissance vocale (microphone → texte)
+  speech_to_text: ^7.0.0  
+
+  # Synthèse vocale (texte → parole)
+  flutter_tts: ^4.0.2
+
+  # Gestion des permissions (micro, téléphone)
+  permission_handler: ^11.3.0
+
+  # Lancer un appel téléphonique
+  url_launcher: ^6.3.0
+
+  # Sauvegarder les préférences utilisateur
+  shared_preferences: ^2.2.3
+
+  # Icônes Material (déjà inclus dans Flutter)
+  cupertino_icons: ^1.0.6
+
+  # ═════════════════════════════════════════════════════
+  # PACKAGES POUR LE SERVICE D'ARRIÈRE-PLAN
+  # ═════════════════════════════════════════════════════
+  flutter_background_service: ^5.0.0
+  flutter_background_service_android: ^6.2.3
+  flutter_local_notifications: ^17.0.0
+  workmanager: ^0.5.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  
+  # Pour changer l'icône de l'application sur le téléphone
+  flutter_launcher_icons: ^0.13.1
+
+flutter:
+  uses-material-design: true
+
+  # ── Déclaration de vos images ──────────────────────────
+  assets:
+    - assets/images/splash_image.png
+    - assets/images/home_robot.png
+    - assets/images/header_image.png
+    - assets/images/yellow_bg_image.png
+
+# ── Configuration de l'icône de l'application ──────────
+flutter_launcher_icons:
+  image_path: "assets/images/app_icon.png"
+  android: true
+  ios: false
+  remove_alpha_ios: true
